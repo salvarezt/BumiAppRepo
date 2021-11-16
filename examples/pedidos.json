@@ -1,0 +1,18 @@
+{
+    "1":{"id":"1",
+        "pedido_padre":"1",
+        "id_cliente":"1000182041",
+        "id_conductor":"0",
+        "estado":"cancelado",
+        "frecuencia":7,
+        "productos":"778,467,123",
+        "cantidades":"1,2,3",
+        "valor_producto_sin_impuestos":"9000,8000,5000",
+        "impuestos_productos":"19,0,5",
+        "valor_descuentos":"1000,1000,500",
+        "moneda":"COP",
+        "subtotal":"98000",
+        "impuestos":"15000",
+        "total":"113000"
+    }
+}

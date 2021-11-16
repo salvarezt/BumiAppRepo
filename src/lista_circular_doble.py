@@ -4,7 +4,8 @@ class Nodo:
         self.siguiente = None
         self.dato = dato
 
-class ListaEnlazada:
+#Esta lista enlazada circular doble posee orden decreciente respecto al id
+class ListaEnlazadaCircularDoble():
     def __init__(self):
         self.cabeza = None
         self.lenght = 0
@@ -26,24 +27,6 @@ class ListaEnlazada:
             self.cabeza.previo = nuevo_nodo
             self.cabeza = nuevo_nodo
         self.lenght += 1
-    
-    def push_back(self,dato):
-        """
-        Añade el nuevo nodo después de la cabeza/cursor y 
-        cambia el cursor/cabeza al nuevo nodo.
-        """
-        nuevo_nodo = Nodo(dato)
-        if self.lenght==0:
-            self.cabeza = nuevo_nodo
-            self.cabeza.previo = self.cabeza
-            self.cabeza.siguiente = self.cabeza
-            self.lenght = nuevo_nodo
-        else:
-            nuevo_nodo.previo = self.cabeza
-            self.cabeza.siguiente.previo = nuevo_nodo
-            self.cabeza.siguiente = nuevo_nodo
-            self.cabeza = nuevo_nodo
-        self.lenght += 1
 
     def search(self,id):
         """
@@ -61,9 +44,9 @@ class ListaEnlazada:
                     return puntero_actual.dato
                     break
             if i==self.lenght()-2 and puntero_actual.dato.id != id:
-                raise Exception("Lo siento, el dato con {id} no se encuentra en lista.".format(id=id))
+                raise Exception("Lo siento, el dato no se encuentra en lista.".format(id=id))
     
-    def add_after(nodo_1, dato):
+    def add_after(self,nodo_1, dato):
         """
         Añade un nuevo nodo con el dato indicado después de nodo_1.
         """
@@ -81,10 +64,16 @@ class ListaEnlazada:
         """
         if self.lenght == 0:
             self.push_front(dato)
-        elif self.cabeza.dato.id > dato.id:
-            self.push_front(dato)
         elif self.cabeza.dato.id == dato.id:
-            raise Exception("Lo siento, el dato con {id} ya se encuentra en lista.".format(id=id))
+            raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
+        elif self.lenght == 1 and self.cabeza.dato.id > dato.id:
+            self.add_after(self.cabeza,dato)
+        elif self.lenght == 1 and self.cabeza.dato.id < dato.id:
+            self.push_front(dato)
+        elif self.cabeza.previo.dato.id < dato.id:
+            self.add_after(self.cabeza.previo,dato)
+        elif self.cabeza.previo.dato.id == dato.id:
+            raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
         else:
             puntero_actual = self.cabeza
             for i in range(0,self.lenght()-2):
@@ -93,15 +82,9 @@ class ListaEnlazada:
                     self.add_after(puntero_actual.previo,dato)
                     break
                 elif puntero_actual.dato.id == dato.id:
-                    raise Exception("Lo siento, el dato con {id} ya se encuentra en lista.".format(id=id))
-            
-            if i==self.lenght()-3 and puntero_actual.siguiente.dato.id < dato.id:
-                self.add_after(puntero_actual.siguiente,dato)
-            elif i==self.lenght()-3 and puntero_actual.siguiente.dato.id == dato.id:
-                raise Exception("Lo siento, el dato con {id} ya se encuentra en lista.".format(id=id))
-        self.lenght += 1
+                    raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
     
-    def erase(id):
+    def erase(self,id):
         try:
             nodo_a_borrar = self.search(id)
             if self.lenght==1:
@@ -112,3 +95,21 @@ class ListaEnlazada:
                 nodo_a_borrar.previo.siguiente = nodo_a_borrar.siguiente
         except:
             raise Exception("Nodo no encontrado")
+    
+    def empty(self):
+        if self.lenght==0:
+            return True
+        else:
+            return False
+    
+    def get_lowest_id(self):
+        if self.empty():
+            return 0
+        else:
+            return self.cabeza.dato.id
+    
+    def get_higest_id(self):
+        if self.empty():
+            return 0
+        else:
+            return self.cabeza.previo.dato.id

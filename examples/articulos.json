@@ -1,0 +1,11 @@
+{
+    "778":{
+        "id":"778",
+        "nombre":"Margarina La Fina",
+        "stock":"500",
+        "url_img":"../img/productos/margarina.jpg",
+        "precio_antes_impuesto":"1000",
+        "impuesto_porcentaje":"19",
+        "descuento":"500"
+    }
+}

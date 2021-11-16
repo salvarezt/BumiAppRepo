@@ -1,0 +1,29 @@
+
+{
+    "1000182041":{
+        "id":"1000182041",
+        "nombres":"Alejandro",
+        "apellidos":"Higuera Castro",
+        "rol":"cliente",
+        "contrasena":"amoamimami",
+        "correo":"ahiguerac@unal.edu.co",
+        "ciudad":"Bogota",
+        "direccion":"CL 57 88 41",
+        "telefono":"6013782025",
+        "zip":"110141",
+        "pedidos":"1,2"
+    },
+    "1000182043":{
+        "id":"123",
+        "nombres":"Pepito",
+        "apellidos":"Alvarez",
+        "rol":"funcionario",
+        "contrasena":"soypepoelpro",
+        "correo":"palvarez@unal.edu.co",
+        "ciudad":"Bogota",
+        "direccion":"CL 57 88 41",
+        "telefono":"6013782025",
+        "zip":"110141",
+        "pedidos":""
+    }
+}
