@@ -54,7 +54,7 @@ class ListaEnlazada:
         elif self.cabeza.dato.id == id:
             return self.cabeza.dato
         else:
-            puntero_actual = self.head
+            puntero_actual = self.cabeza
             for i in range(0,self.lenght()-1):
                 puntero_actual = puntero_actual.siguiente
                 if puntero_actual.dato.id == id:
@@ -86,7 +86,7 @@ class ListaEnlazada:
         elif self.cabeza.dato.id == dato.id:
             raise Exception("Lo siento, el dato con {id} ya se encuentra en lista.".format(id=id))
         else:
-            puntero_actual = self.head
+            puntero_actual = self.cabeza
             for i in range(0,self.lenght()-2):
                 puntero_actual = puntero_actual.siguiente
                 if puntero_actual.dato.id > dato.id:
@@ -105,7 +105,7 @@ class ListaEnlazada:
         try:
             nodo_a_borrar = self.search(id)
             if self.lenght==1:
-                self.head = None
+                self.cabeza = None
                 self.lenght = 0
             else:
                 nodo_a_borrar.siguiente.previo = nodo_a_borrar.previo
