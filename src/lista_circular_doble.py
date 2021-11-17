@@ -58,7 +58,7 @@ class ListaEnlazadaCircularDoble():
         nodo_2.siguiente.previo = nodo_2
         self.lenght += 1
 
-    def insert_with_order(self,dato):
+    def insertar_con_orden(self,dato):
         """
         Inserta un nuevo nodo con el dato indicado teniendo en 
         cuenta el orden decreciente dado por id.
@@ -138,9 +138,9 @@ usuario_2 = Usuario(2,"María","Alvarez","cliente","amoamimami","ahiguerac@unal.
 usuario_3 = Usuario(3,"Juancho","Alvarez","cliente","amoamimami","ahiguerac@unal.edu.co","Bogotá","CL 197 18 71",
         6013782025,110141,"1,2")
 
-coleccion_ejemplo.insert_with_order(usuario_3)
-coleccion_ejemplo.insert_with_order(usuario_2)
-coleccion_ejemplo.insert_with_order(usuario_1)
+coleccion_ejemplo.insertar_con_orden(usuario_3)
+coleccion_ejemplo.insertar_con_orden(usuario_2)
+coleccion_ejemplo.insertar_con_orden(usuario_1)
 print(coleccion_ejemplo.buscar_nodo(2).dato.id)
 coleccion_ejemplo.eliminar(1)
 '''
