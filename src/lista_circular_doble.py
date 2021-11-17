@@ -1,4 +1,3 @@
-from typing import Collection
 from usuario import Usuario
 
 class Nodo:
@@ -87,6 +86,7 @@ class ListaEnlazadaCircularDoble():
                     raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
     
     def eliminar_cabeza(self):
+        dato_a_borrar = self.cabeza.dato
         if self.lenght==1:
             self.cabeza = None
         else:
@@ -96,12 +96,14 @@ class ListaEnlazadaCircularDoble():
             aux_previo.siguiente = self.cabeza.siguiente
             self.cabeza = aux_siguiente
         self.lenght -=1
+        return dato_a_borrar
     
     def eliminar(self,id):
         try:
             nodo_a_borrar = self.buscar_nodo(id)
+            dato_a_borrar = nodo_a_borrar.dato
             if self.cabeza.dato.id == id:
-                self.eliminar_cabeza()
+                dato_a_borrar = self.eliminar_cabeza()
                 self.lenght +=1
             elif self.lenght==2:
                 self.cabeza.previo = None
@@ -110,6 +112,7 @@ class ListaEnlazadaCircularDoble():
                 nodo_a_borrar.siguiente.previo = nodo_a_borrar.previo
                 nodo_a_borrar.previo.siguiente = nodo_a_borrar.siguiente
             self.lenght -=1
+            return dato_a_borrar
         except:
             raise Exception("Nodo no encontrado")
     
