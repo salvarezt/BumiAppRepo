@@ -122,17 +122,11 @@ class ListaEnlazadaCircularDoble():
         else:
             return False
     
-    def obtener_id_mas_bajo(self):
-        if self.esta_vacio():
-            return 0
-        else:
-            return self.cabeza.dato.id
+    def obtener_nodo_id_mas_bajo(self):
+        return self.cabeza
     
-    def obtener_id_mas_alto(self):
-        if self.esta_vacio():
-            return 0
-        else:
-            return self.cabeza.previo.dato.id
+    def obtener_nodo_id_mas_alto(self):
+        return self.cabeza.previo
 
 #Datos_de_prueba
 '''
@@ -149,5 +143,4 @@ coleccion_ejemplo.insert_with_order(usuario_2)
 coleccion_ejemplo.insert_with_order(usuario_1)
 print(coleccion_ejemplo.buscar_nodo(2).dato.id)
 coleccion_ejemplo.eliminar(1)
-print("Hello")
 '''
