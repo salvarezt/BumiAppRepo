@@ -1,3 +1,6 @@
+from typing import Collection
+from usuario import Usuario
+
 class Nodo:
     def __init__(self,dato):
         self.previo = None
@@ -10,7 +13,7 @@ class ListaEnlazadaCircularDoble():
         self.cabeza = None
         self.lenght = 0
     
-    def push_front(self,dato):
+    def empujar_adelante(self,dato):
         """
         Añade el nuevo nodo antes de la cabeza/cursor y 
         cambia el cursor/cabeza al nuevo nodo.
@@ -20,7 +23,6 @@ class ListaEnlazadaCircularDoble():
             self.cabeza = nuevo_nodo
             self.cabeza.previo = self.cabeza
             self.cabeza.siguiente = self.cabeza
-            self.lenght = nuevo_nodo
         else:
             nuevo_nodo.siguiente = self.cabeza
             nuevo_nodo.previo = self.cabeza.previo
@@ -28,25 +30,25 @@ class ListaEnlazadaCircularDoble():
             self.cabeza = nuevo_nodo
         self.lenght += 1
 
-    def search(self,id):
+    def buscar_nodo(self,id):
         """
         Retorna el dato en lista con el indicado.
         """
         if self.lenght == 0:
-            raise Exception("Lo siento, esta lista está vacía")
+            raise Exception("No encontrado")
         elif self.cabeza.dato.id == id:
-            return self.cabeza.dato
+            return self.cabeza
         else:
             puntero_actual = self.cabeza
-            for i in range(0,self.lenght()-1):
+            for i in range(0,self.lenght-1):
                 puntero_actual = puntero_actual.siguiente
                 if puntero_actual.dato.id == id:
-                    return puntero_actual.dato
+                    return puntero_actual
                     break
-            if i==self.lenght()-2 and puntero_actual.dato.id != id:
-                raise Exception("Lo siento, el dato no se encuentra en lista.".format(id=id))
+            if i==self.lenght-2 and puntero_actual.dato.id != id:
+                raise Exception("No encontrado")
     
-    def add_after(self,nodo_1, dato):
+    def anadir_despues_de(self,nodo_1, dato):
         """
         Añade un nuevo nodo con el dato indicado después de nodo_1.
         """
@@ -63,53 +65,68 @@ class ListaEnlazadaCircularDoble():
         cuenta el orden decreciente dado por id.
         """
         if self.lenght == 0:
-            self.push_front(dato)
+            self.empujar_adelante(dato)
         elif self.cabeza.dato.id == dato.id:
             raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
-        elif self.lenght == 1 and self.cabeza.dato.id > dato.id:
-            self.add_after(self.cabeza,dato)
         elif self.lenght == 1 and self.cabeza.dato.id < dato.id:
-            self.push_front(dato)
+            self.anadir_despues_de(self.cabeza,dato)
+        elif self.cabeza.dato.id > dato.id:
+            self.empujar_adelante(dato)
         elif self.cabeza.previo.dato.id < dato.id:
-            self.add_after(self.cabeza.previo,dato)
+            self.anadir_despues_de(self.cabeza.previo,dato)
         elif self.cabeza.previo.dato.id == dato.id:
             raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
         else:
             puntero_actual = self.cabeza
-            for i in range(0,self.lenght()-2):
+            for i in range(0,self.lenght-2):
                 puntero_actual = puntero_actual.siguiente
                 if puntero_actual.dato.id > dato.id:
-                    self.add_after(puntero_actual.previo,dato)
+                    self.anadir_despues_de(puntero_actual.previo,dato)
                     break
                 elif puntero_actual.dato.id == dato.id:
                     raise Exception("Lo siento, el id ya se encuentra en lista.".format(id=id))
     
-    def erase(self,id):
+    def eliminar_cabeza(self):
+        if self.lenght==1:
+            self.cabeza = None
+        else:
+            aux_previo = self.cabeza.previo
+            aux_siguiente = self.cabeza.siguiente
+            aux_siguiente.previo = self.cabeza.previo
+            aux_previo.siguiente = self.cabeza.siguiente
+            self.cabeza = aux_siguiente
+        self.lenght -=1
+    
+    def eliminar(self,id):
         try:
-            nodo_a_borrar = self.search(id)
-            if self.lenght==1:
-                self.cabeza = None
-                self.lenght = 0
+            nodo_a_borrar = self.buscar_nodo(id)
+            if self.cabeza.dato.id == id:
+                self.eliminar_cabeza()
+                self.lenght +=1
+            elif self.lenght==2:
+                self.cabeza.previo = None
+                self.cabeza.siguiente = None
             else:
                 nodo_a_borrar.siguiente.previo = nodo_a_borrar.previo
                 nodo_a_borrar.previo.siguiente = nodo_a_borrar.siguiente
+            self.lenght -=1
         except:
             raise Exception("Nodo no encontrado")
     
-    def empty(self):
+    def esta_vacio(self):
         if self.lenght==0:
             return True
         else:
             return False
     
-    def get_lowest_id(self):
-        if self.empty():
+    def obtener_id_mas_bajo(self):
+        if self.esta_vacio():
             return 0
         else:
             return self.cabeza.dato.id
     
-    def get_higest_id(self):
-        if self.empty():
+    def obtener_id_mas_alto(self):
+        if self.esta_vacio():
             return 0
         else:
             return self.cabeza.previo.dato.id
