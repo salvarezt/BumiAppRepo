@@ -130,3 +130,21 @@ class ListaEnlazadaCircularDoble():
             return 0
         else:
             return self.cabeza.previo.dato.id
+
+#Datos_de_prueba
+'''
+coleccion_ejemplo = ListaEnlazadaCircularDoble()
+usuario_1 = Usuario(1,"Pepito","Alvarez","cliente","amoamimami","ahiguerac@unal.edu.co","Bogotá","CL 197 18 71",
+        6013782025,110141,"1,2")
+usuario_2 = Usuario(2,"María","Alvarez","cliente","amoamimami","ahiguerac@unal.edu.co","Bogotá","CL 197 18 71",
+        6013782025,110141,"1,2")
+usuario_3 = Usuario(3,"Juancho","Alvarez","cliente","amoamimami","ahiguerac@unal.edu.co","Bogotá","CL 197 18 71",
+        6013782025,110141,"1,2")
+
+coleccion_ejemplo.insert_with_order(usuario_3)
+coleccion_ejemplo.insert_with_order(usuario_2)
+coleccion_ejemplo.insert_with_order(usuario_1)
+print(coleccion_ejemplo.buscar_nodo(2).dato.id)
+coleccion_ejemplo.eliminar(1)
+print("Hello")
+'''
