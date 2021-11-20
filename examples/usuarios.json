@@ -1,7 +1,6 @@
 
 {
     "1000182041":{
-        "id":"1000182041",
         "nombres":"Alejandro",
         "apellidos":"Higuera Castro",
         "rol":"cliente",
@@ -14,7 +13,6 @@
         "pedidos":"1,2"
     },
     "1000182043":{
-        "id":"123",
         "nombres":"Pepito",
         "apellidos":"Alvarez",
         "rol":"funcionario",
