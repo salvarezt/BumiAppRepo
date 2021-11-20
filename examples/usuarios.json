@@ -9,8 +9,7 @@
         "ciudad":"Bogota",
         "direccion":"CL 57 88 41",
         "telefono":"6013782025",
-        "zip":"110141",
-        "pedidos":"1,2"
+        "zip":"110141"
     },
     "1000182043":{
         "nombres":"Pepito",
@@ -21,7 +20,6 @@
         "ciudad":"Bogota",
         "direccion":"CL 57 88 41",
         "telefono":"6013782025",
-        "zip":"110141",
-        "pedidos":""
+        "zip":"110141"
     }
 }
