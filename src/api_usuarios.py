@@ -1,9 +1,10 @@
 from lista_circular_doble import ListaEnlazadaCircularDoble
-from usuario import Cliente,Funcionario
+from usuario import Usuario, Cliente,Funcionario
+import json
 
 coleccion_de_usuarios = None
 estructura_de_datos = 1
-file_data_clients = "../examples/usuarios.json"
+file_data_users = "../examples/usuarios.json"
 
 #Funciones de la API que proveen funcionalidades CRUD sobre el manejo de usuarios
 
@@ -14,7 +15,45 @@ def seleccionar_estructura():
 #Función que carga la base de datos de clientes del archivo JSON a la lista
 def descargar_usuarios():
     #Del file_data_clients, cargue todos los usuarios a un objeto de tipo Usuario
-    pass
+    f = open(file_data_users, 'r')
+    usuarios = json.loads(f.read())
+    f.close()
+    for id in usuarios:
+        datos = usuarios[id].values()
+        usuario = Usuario(id, *datos)
+        coleccion_de_usuarios.insertar_con_orden(usuario)
+
+def crear_nuevo_usuario(id,nombres,apellidos,contrasena
+    correo,ciudad,direccion,telefono,zip):
+    """
+    Función que crea un nuevo usuario
+
+    Parámetros
+    ----------
+    id: int
+        Documento de identidad del usuario
+    nombres: string
+        Nombres del usuario
+    apellidos: string
+        Apellidos del usuario
+    contrasena: string
+        Contraseña del usuario
+    correo: string
+        Correo del usuario
+    ciudad: string
+        Ciudad del usuario
+    direccion: string
+        Dirección de residencia del usuario
+    telefono: int
+        Teléfono del usuario
+    zip: int
+        Códido postal del usuario
+    pedidos : string
+    
+    Retorna el usuario creado
+    """
+    
+    
 
 def crear_nuevo_cliente(id,nombres,apellidos,contrasena,
     correo,ciudad,direccion,telefono,zip):

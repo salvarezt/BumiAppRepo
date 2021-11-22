@@ -1,7 +1,6 @@
 
 {
     "1000182041":{
-        "id":"1000182041",
         "nombres":"Alejandro",
         "apellidos":"Higuera Castro",
         "rol":"cliente",
@@ -11,10 +10,9 @@
         "direccion":"CL 57 88 41",
         "telefono":"6013782025",
         "zip":"110141",
-        "pedidos":"1,2"
+        "pedidos": "1, 2"
     },
     "1000182043":{
-        "id":"123",
         "nombres":"Pepito",
         "apellidos":"Alvarez",
         "rol":"funcionario",
@@ -24,6 +22,6 @@
         "direccion":"CL 57 88 41",
         "telefono":"6013782025",
         "zip":"110141",
-        "pedidos":""
+        "pedidos": ""
     }
 }
