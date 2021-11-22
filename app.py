@@ -10,7 +10,6 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-
 @app.route('/<path:path>', methods=['GET'])
 def static_proxy(path):
   return send_from_directory('./static', path)

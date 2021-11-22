@@ -1,0 +1,92 @@
+{
+    "0": {
+        "id": 0,
+        "nombre": "Producto Bumi 0",
+        "stock": 38,
+        "url_img": "https://bumi.com/id/kkHZKE7221oA.png",
+        "precio_antes_impuesto": 646858,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.23355568800404214
+    },
+    "1": {
+        "id": 1,
+        "nombre": "Producto Bumi 1",
+        "stock": 27,
+        "url_img": "https://bumi.com/id/ufTdbWoML0oc.png",
+        "precio_antes_impuesto": 1131930,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.8517990754441314
+    },
+    "2": {
+        "id": 2,
+        "nombre": "Producto Bumi 2",
+        "stock": 42,
+        "url_img": "https://bumi.com/id/dUJnpuSEAQOz.png",
+        "precio_antes_impuesto": 1815864,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.4086281055455062
+    },
+    "3": {
+        "id": 3,
+        "nombre": "Producto Bumi 3",
+        "stock": 42,
+        "url_img": "https://bumi.com/id/ZkGMturhCZsf.png",
+        "precio_antes_impuesto": 1907597,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.6718822567545152
+    },
+    "4": {
+        "id": 4,
+        "nombre": "Producto Bumi 4",
+        "stock": 29,
+        "url_img": "https://bumi.com/id/curLHGKBBOPu.png",
+        "precio_antes_impuesto": 446501,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.7638908603926501
+    },
+    "5": {
+        "id": 5,
+        "nombre": "Producto Bumi 5",
+        "stock": 31,
+        "url_img": "https://bumi.com/id/xSrtUTxy3AnB.png",
+        "precio_antes_impuesto": 324062,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.8221658783588843
+    },
+    "6": {
+        "id": 6,
+        "nombre": "Producto Bumi 6",
+        "stock": 17,
+        "url_img": "https://bumi.com/id/IBbLIM9LHmB5.png",
+        "precio_antes_impuesto": 488625,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.043601959147123504
+    },
+    "7": {
+        "id": 7,
+        "nombre": "Producto Bumi 7",
+        "stock": 40,
+        "url_img": "https://bumi.com/id/HBhbukXizoNh.png",
+        "precio_antes_impuesto": 1537387,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.6717630079105318
+    },
+    "8": {
+        "id": 8,
+        "nombre": "Producto Bumi 8",
+        "stock": 18,
+        "url_img": "https://bumi.com/id/w8JIfCDJ0bUd.png",
+        "precio_antes_impuesto": 522481,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.40267344013577044
+    },
+    "9": {
+        "id": 9,
+        "nombre": "Producto Bumi 9",
+        "stock": 21,
+        "url_img": "https://bumi.com/id/Em3tdloivt7Z.png",
+        "precio_antes_impuesto": 416218,
+        "impuesto_porcentaje": 0.19,
+        "descuento": 0.5798814018805221
+    }
+}

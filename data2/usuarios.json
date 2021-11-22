@@ -1,0 +1,192 @@
+{
+    "0": {
+        "id": 0,
+        "nombre": "Derek Ochoa",
+        "rol": "usuario",
+        "contrasena": "3#K%pMh@%0",
+        "correo": [
+            "dustinsmith@example.com"
+        ],
+        "direccion": [
+            "4609 Richard Mountain Apt. 271\nNorth Jamesbury, NC 45480"
+        ],
+        "telefono": [
+            "478.532.5974"
+        ],
+        "zip": [
+            10376420
+        ],
+        "pedidos": ""
+    },
+    "1": {
+        "id": 1,
+        "nombre": "Thomas Thompson",
+        "rol": "usuario",
+        "contrasena": "_X6X+UCw3^",
+        "correo": [
+            "jesuschambers@example.net"
+        ],
+        "direccion": [
+            "USNV Bailey\nFPO AA 01736"
+        ],
+        "telefono": [
+            "(800)821-7549x83981"
+        ],
+        "zip": [
+            14987196
+        ],
+        "pedidos": ""
+    },
+    "2": {
+        "id": 2,
+        "nombre": "Aaron Murillo",
+        "rol": "funcionario",
+        "contrasena": "!C4XnxaAq8",
+        "correo": [
+            "pattersonmaria@example.org"
+        ],
+        "direccion": [
+            "79070 Paul Park Apt. 320\nTraceyborough, AR 26004"
+        ],
+        "telefono": [
+            "376-679-4071"
+        ],
+        "zip": [
+            10198761
+        ],
+        "pedidos": ""
+    },
+    "3": {
+        "id": 3,
+        "nombre": "Jamie Wheeler",
+        "rol": "usuario",
+        "contrasena": "2xoRxU@h+l",
+        "correo": [
+            "elizabeth83@example.net"
+        ],
+        "direccion": [
+            "0019 Brenda Ferry Apt. 023\nEast Christineburgh, KY 24287"
+        ],
+        "telefono": [
+            "001-942-366-6790x073"
+        ],
+        "zip": [
+            19415724
+        ],
+        "pedidos": ""
+    },
+    "4": {
+        "id": 4,
+        "nombre": "Seth Mueller PhD",
+        "rol": "usuario",
+        "contrasena": "#pAH+xi77H",
+        "correo": [
+            "amberpowell@example.com"
+        ],
+        "direccion": [
+            "76872 Carol Divide\nJohnsonshire, NC 28917"
+        ],
+        "telefono": [
+            "9258699555"
+        ],
+        "zip": [
+            11118133
+        ],
+        "pedidos": ""
+    },
+    "5": {
+        "id": 5,
+        "nombre": "Peter Palmer",
+        "rol": "usuario",
+        "contrasena": "X88&Jh3b%3",
+        "correo": [
+            "jglover@example.net"
+        ],
+        "direccion": [
+            "93812 Kimberly Hill Apt. 493\nNew Christopher, KS 28949"
+        ],
+        "telefono": [
+            "+1-439-719-4019x551"
+        ],
+        "zip": [
+            12527749
+        ],
+        "pedidos": ""
+    },
+    "6": {
+        "id": 6,
+        "nombre": "Alexander Little",
+        "rol": "usuario",
+        "contrasena": "yBBv0Yz6^0",
+        "correo": [
+            "emily75@example.net"
+        ],
+        "direccion": [
+            "14082 Curtis Via Suite 958\nGarciaview, NV 55133"
+        ],
+        "telefono": [
+            "(455)260-7824x7583"
+        ],
+        "zip": [
+            19757867
+        ],
+        "pedidos": ""
+    },
+    "7": {
+        "id": 7,
+        "nombre": "Michael Harris",
+        "rol": "funcionario",
+        "contrasena": "*1Yk3TLl)Z",
+        "correo": [
+            "bberry@example.com"
+        ],
+        "direccion": [
+            "13529 Bullock Land Suite 639\nNew Kyle, SC 58930"
+        ],
+        "telefono": [
+            "183-580-2853"
+        ],
+        "zip": [
+            17989364
+        ],
+        "pedidos": ""
+    },
+    "8": {
+        "id": 8,
+        "nombre": "Brian Webb",
+        "rol": "usuario",
+        "contrasena": "BK+7L)6wE^",
+        "correo": [
+            "charles86@example.org"
+        ],
+        "direccion": [
+            "1139 John Shore Suite 946\nWalshville, WA 89679"
+        ],
+        "telefono": [
+            "535-027-7488x9145"
+        ],
+        "zip": [
+            16457865
+        ],
+        "pedidos": ""
+    },
+    "9": {
+        "id": 9,
+        "nombre": "Susan Pineda",
+        "rol": "funcionario",
+        "contrasena": "U#4YZClf3s",
+        "correo": [
+            "wilsonrandy@example.org"
+        ],
+        "direccion": [
+            "113 Peter Glens\nWest Dianashire, LA 01086"
+        ],
+        "telefono": [
+            "0924241246"
+        ],
+        "zip": [
+            18889568
+        ],
+        "pedidos": ""
+    }
+}

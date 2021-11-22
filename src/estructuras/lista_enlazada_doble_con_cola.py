@@ -122,7 +122,7 @@ class ListaEnlazadaDoble:
       self.cola.siguiente = None
     return dato_eliminado
   
-   def buscar_nodo(self, id):
+  def buscar_nodo(self, id):
         """
         Retorna el nodo en la lista con el id.
         """
