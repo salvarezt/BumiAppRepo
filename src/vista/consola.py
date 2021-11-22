@@ -4,10 +4,10 @@ class Consola(metaclass= Singleton):
     def __init__(self):
         self.usuario = None
 
-    def mensaje_bienvenida(self, app):
+    def mensaje_bienvenida(self):
         print("\t----- Bienvenido a BUMI (version en consola)-----")
         print("Ingrese sesión para continuar:\n")
-        self.iniciar_sesion(app)
+        self.iniciar_sesion()
         return 0
     
     def iniciar_sesion(self, app):
