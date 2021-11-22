@@ -76,7 +76,7 @@ class App(metaclass=Singleton):
     # Operaciones de vista:
     def bienvenida(self):
         self.consola.mensaje_bienvenida(self)
-        self.consola.iniciar_sesion()
+        self.consola.iniciar_sesion(self)
 
     def verificar_sesion(self, id, contrasena):
         return self.consola.verificar_sesion(id, contrasena, self.usuario)
