@@ -1,5 +1,6 @@
 from lista_circular_doble import ListaEnlazadaCircularDoble
 from producto import Articulo
+from flask import jsonify
 
 coleccion_de_articulos = None
 estructura_de_datos = 1
