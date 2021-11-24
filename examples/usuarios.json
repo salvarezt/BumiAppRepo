@@ -11,8 +11,8 @@
         "telefono":"6013782025",
         "zip":"110141",
         "pedidos": "1, 2"
-    },
-    "1000182043":{
+    }
+    ,"1000182043":{
         "nombres":"Pepito",
         "apellidos":"Alvarez",
         "rol":"funcionario",
